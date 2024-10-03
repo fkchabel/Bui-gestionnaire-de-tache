@@ -1,50 +1,56 @@
-# React + TypeScript + Vite
+# Application de Gestion de Tâches
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet est une application de gestion de tâches (to-do list) développée avec React.js dans le cadre d'un test technique pour Buicorporation.
 
-Currently, two official plugins are available:
+## Fonctionnalités
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Ajouter des tâches
+- Modifier des tâches existantes
+- Supprimer des tâches
+- Filtrer les tâches (toutes, complétées, incomplètes)
+- Compteur de tâches restantes
+- Interface responsive (mobile et desktop)
+- Persistance des données (localStorage)
 
-## Expanding the ESLint configuration
+## Technologies utilisées
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- React.js
+- NEXT Ui, Tailwind CSS, Phosphor-react pour les icones
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clonez ce dépôt :
+   ```
+   git clone https://github.com/fkchabel/Bui-gestionnaire-de-tache.git
+   ```
+2. Naviguez dans le répertoire du projet :
+   ```
+   cd Bui-gestionnaire-de-tache
+   ```
+3. Installez les dépendances :
+   ```
+   npm install
+   ```
+
+## Lancement de l'application
+
+Pour lancer l'application en mode développement, exécutez :
+
+```
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+L'application sera accessible à l'adresse [http://localhost:5173](http://localhost:5173) dans votre navigateur.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Structure du projet
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+App.tsx | Declaration de deux route: "/" pour l'accueil et "/todo" pour la route vers le composant de listing des taches
+
+## Choix techniques
+
+L'utilisation du localStorage pour faire persister les data, meme au rechargement de la page
+Typage des donnees
+
+## Auteur
+
+Jean-Boris Chabel | Frontend Developer.
